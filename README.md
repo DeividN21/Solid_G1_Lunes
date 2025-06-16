@@ -46,3 +46,21 @@ En el proyecto inicial, la interfaz Device violaba el ISP al incluir el método 
 
 ### Reflexión:
 En el proyecto inicial, la clase PaymentProcessor violaba el DIP al depender directamente de la clase concreta CreditCardPayment, lo que dificultaba cambiar o agregar nuevos métodos de pago sin modificar el código. Por esto, en la refactorización se introdujo una interfaz PaymentMethod con un método processPayment(), y se crearon clases concretas como CreditCardPayment, PayPalPayment, y CryptoPayment que implementan esta interfaz. Como resultado, se transformó un sistema rígido en uno flexible y desacoplado, demostrando la importancia de depender de abstracciones en lugar de implementaciones concretas.
+
+
+## Reflexión General sobre los Principios SOLID
+
+### Reflexión 1 (José Naranjo):
+El principio más desafiante de aplicar fue el de Sustitución de Liskov (LSP), ya que nos hizo cuestionar cómo estábamos estructurando la herencia en las clases y nos obligó a pensar más allá del funcionamiento básico, para asegurarnos de que las subclases realmente pudieran reemplazar a sus clases padre sin generar errores. Entender y aplicar este principio implicó pensar la lógica y dividir responsabilidades correctamente. Creo que SOLID mejora el diseño de software porque nos guía hacia un código más limpio, mantenible y preparado para el cambio, algo fundamental en proyectos reales donde los requerimientos suelen evolucionar. De todos los principios, el que más aplicaré en futuros proyectos será el de Abierto/Cerrado (OCP), porque me permite extender funcionalidades sin tener que modificar lo que ya funciona, reduciendo riesgos y haciendo que el desarrollo sea más flexible y escalable.
+
+### Reflexión 2 (David Navarrete):
+El principio más complicado para mí fue el de OCP (Abierto/Cerrado) porque tuvimos que cambiar nuestra forma de pensar: normalmente escribíamos código que funcionara, sin pensar en cómo crecería luego. Nos costó separar responsabilidades y entender cómo extender sin modificar. Aun así, notamos que los principios SOLID en general ayuda a que el software sea más fácil de mantener y menos frágil cuando hay cambios. En particular, me gustó mucho aplicar el SRP (Responsabilidad Única), porque nos permitió organizar mejor las clases y evitar que una sola clase hiciera de todo. Lo usaré en el proyecto de titulación.
+
+### Reflexión 3 (Tomás Nuñez):
+Para mí, el principio más desafiante fue LSP, porque al principio parecía fácil, pero cuando trabajamos con el ejemplo del pez y el método walk(), entendimos que no todo lo que hereda funciona igual. Nos ayudó a ver que a veces heredamos por costumbre y no porque tenga sentido lógico. Aprender los principios SOLID cambió nuestra forma de pensar al diseñar software. Sin duda, el OCP es el principio que más planeo aplicar, porque me permite agregar funcionalidades nuevas sin tocar lo que ya existe, lo cual es ideal para proyectos que seguirán creciendo.
+
+### Reflexión 4 (Anahí Quezada):
+Aplicar el Principio de Responsabilidad Única (SRP) fue lo más difícil para mí, ya que tendíamos a crear clases con muchas funciones “por comodidad”. Sin embargo, al descomponerlas en clases más pequeñas y específicas, vimos cómo se volvía más fácil probar, mantener y entender el código. Por lo tanto, los principios SOLID nos ayudaron a ver que un buen diseño no se trata solo de que el programa funcione, sino de que sea entendible y adaptable por cualquier miembro del equipo. El principio que más quiero aplicar en mis futuros desarrollos es LSP, porque me hizo reflexionar sobre el uso correcto de la herencia y cómo evitar errores inesperados al sustituir objetos.
+
+### Reflexión 5 (Anthony Rodriguez):
+El principio más difícil de aplicar fue el OCP, ya que nos obligó a confiar más en interfaces y polimorfismo, algo que no habíamos usado tanto. Nos hizo salir de la costumbre de usar muchos if y empezar a pensar en clases que se puedan “enchufar” al sistema sin romper lo demás. Nos dimos cuenta de que los principios SOLID no son solo una teoría; realmente hace que el software sea más ordenado, comprensible y menos propenso a errores. De todos los principios, el que más voy a seguir usando es SRP, porque dividir responsabilidades me ayudó a tener un código más modular y claro, especialmente en proyectos grandes o en equipo.
