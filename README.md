@@ -3,7 +3,7 @@
 ## Principio SRP
 
 ### Captura de Ejecución
-(Insertar captura)
+![Imagen](https://raw.githubusercontent.com/DeividN21/MejoresPracticas_CoreMVC/d8eab4f323188ae9777f1544f47740ab3fafeb94/Singleton.png)
 
 ### Reflexión
 Al aplicar el principio de responsabilidad única, nos dimos cuenta de la importancia que es que cada clase haga solo una cosa. Antes, la clase UserManager hacía de todo, validaba, guardaba datos y enviaba correos. Eso volvía el código más complicado y difícil de mantener.
